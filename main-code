@@ -1,0 +1,886 @@
+import React, { Component } from 'react';
+import { AppRegistry, Text, View, StyleSheet, TouchableHighlight, Dimensions, Image, ImageBackground } from 'react-native';
+import Constants from 'expo-constants';
+
+let deviceHeight = Dimensions.get('window').height;
+let deviceWidth = Dimensions.get('window').width;
+
+export default class App extends Component {
+    
+    state = {
+        questionPageDisplay: 'block',
+        yesPageDisplay: 'none',
+        noPageDisplay: 'none',
+        
+        firstQuestionPageDisplay: 'none',
+        expelliarmusPageDisplay: 'none',
+        stupefyPageDisplay: 'none',
+        
+        lumosPageDisplay: 'none',
+        stupefyPageDisplay2: 'none',
+        expelliarmusPageDisplay2: 'none',
+        riddikulusPageDisplay: 'none',
+        
+        wingardiumPageDisplay: 'none',
+        avadaPageDisplay: 'none',
+        riddikulusPageDisplay2: 'none',
+        lumosPageDisplay2: 'none',
+        
+        lastPageDisplay: 'none',
+    }
+    handleQuestionPagePress = () => this.setState(state => ({
+        questionPageDisplay: 'block',
+        yesPageDisplay: 'none',
+        noPageDisplay: 'none',
+        
+        firstQuestionPageDisplay: 'none',
+        expelliarmusPageDisplay: 'none',
+        stupefyPageDisplay: 'none',
+        
+        lumosPageDisplay: 'none',
+        stupefyPageDisplay2: 'none',
+        expelliarmusPageDisplay2: 'none',
+        riddikulusPageDisplay: 'none',
+        
+        wingardiumPageDisplay: 'none',
+        avadaPageDisplay: 'none',
+        riddikulusPageDisplay2: 'none',
+        lumosPageDisplay2: 'none',
+        
+        lastPageDisplay: 'none',
+    }));
+    
+    handleYesPagePress = () => this.setState(state => ({
+        questionPageDisplay: 'none',
+        yesPageDisplay: 'block',
+        noPageDisplay: 'none',
+        
+        firstQuestionPageDisplay: 'none',
+        expelliarmusPageDisplay: 'none',
+        stupefyPageDisplay: 'none',
+        
+        lumosPageDisplay: 'none',
+        stupefyPageDisplay2: 'none',
+        expelliarmusPageDisplay2: 'none',
+        riddikulusPageDisplay: 'none',
+        
+        wingardiumPageDisplay: 'none',
+        avadaPageDisplay: 'none',
+        riddikulusPageDisplay2: 'none',
+        lumosPageDisplay2: 'none',
+        
+        lastPageDisplay: 'none',
+    }));
+    
+    handleNoPagePress = () => this.setState(state => ({
+        questionPageDisplay: 'none',
+        yesPageDisplay: 'none',
+        noPageDisplay: 'block',
+        
+        firstQuestionPageDisplay: 'none',
+        expelliarmusPageDisplay: 'none',
+        stupefyPageDisplay: 'none',
+        
+        lumosPageDisplay: 'none',
+        stupefyPageDisplay2: 'none',
+        expelliarmusPageDisplay2: 'none',
+        riddikulusPageDisplay: 'none',
+        
+        wingardiumPageDisplay: 'none',
+        avadaPageDisplay: 'none',
+        riddikulusPageDisplay2: 'none',
+        lumosPageDisplay2: 'none',
+        
+        lastPageDisplay: 'none',
+    }));
+    
+    handleFirstQuestionPagePress = () => this.setState(state => ({
+        questionPageDisplay: 'none',
+        yesPageDisplay: 'none',
+        noPageDisplay: 'none',
+        
+        firstQuestionPageDisplay: 'block',
+        expelliarmusPageDisplay: 'none',
+        stupefyPageDisplay: 'none',
+        
+        lumosPageDisplay: 'none',
+        stupefyPageDisplay2: 'none',
+        expelliarmusPageDisplay2: 'none',
+        riddikulusPageDisplay: 'none',
+        
+        wingardiumPageDisplay: 'none',
+        avadaPageDisplay: 'none',
+        riddikulusPageDisplay2: 'none',
+        lumosPageDisplay2: 'none',
+        
+        lastPageDisplay: 'none',
+    }));
+    
+    yesOrNoFeedback = (answer) => {
+        if (answer == 'Yes') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'block',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } else if (answer == 'No') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'block',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } 
+    }
+    
+    questionOneFeedback = (answer) => {
+        if (answer == 'First') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'block',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } else if (answer == 'Second') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'block',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } 
+    }
+    
+    questionTwoFeedback = (answer) => {
+        if (answer == 'First') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'block',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } else if (answer == 'Second') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'block',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } else if (answer == 'Third') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'block',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } else if (answer == 'Fourth') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'block',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } 
+    }
+    questionThreeFeedback = (answer) => {
+        if (answer == 'First') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'block',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } else if (answer == 'Second') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'block',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } else if (answer == 'Third') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'block',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } else if (answer == 'Fourth') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'block',
+                
+                lastPageDisplay: 'none',
+            })
+        }
+    }
+        yesOrNoFeedback2 = (answer) => {
+        if (answer == 'Yes') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'block',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'none',
+            })
+        } else if (answer == 'No') {
+            this.setState({ 
+                questionPageDisplay: 'none',
+                yesPageDisplay: 'none',
+                noPageDisplay: 'none',
+                
+                firstQuestionPageDisplay: 'none',
+                expelliarmusPageDisplay: 'none',
+                stupefyPageDisplay: 'none',
+                
+                lumosPageDisplay: 'none',
+                stupefyPageDisplay2: 'none',
+                expelliarmusPageDisplay2: 'none',
+                riddikulusPageDisplay: 'none',
+                
+                wingardiumPageDisplay: 'none',
+                avadaPageDisplay: 'none',
+                riddikulusPageDisplay2: 'none',
+                lumosPageDisplay2: 'none',
+                
+                lastPageDisplay: 'block',
+            })
+        } 
+    }
+    render() {
+        return (
+            <View style={styles.container}>
+                <ImageBackground
+                    style={styles.background}
+                    source={{ uri: 'https://codehs.com/uploads/41fe8c3c56df989d009f278dd853e5cc' }}
+                >
+                    <View style={{ display: this.state.questionPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                Do you like Harry Potter?
+                            </Text>
+                            <View style={styles.answerChoicesContainer}>
+                                <TouchableHighlight
+                                    onPress={() => this.yesOrNoFeedback('Yes')}
+                                >
+                                    <View style={styles.answerChoices}>
+                                        <Text style={styles.answerChoicesText}>
+                                            YES!!
+                                        </Text>
+                                    </View>
+                                </TouchableHighlight>
+                                <TouchableHighlight
+                                    onPress={() => this.yesOrNoFeedback('No')}
+                                >
+                                    <View style={styles.answerChoices}>
+                                        <Text style={styles.answerChoicesText}>
+                                            No :(
+                                        </Text>
+                                    </View>
+                                </TouchableHighlight>
+                            </View>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.yesPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                Awesome! Try out this short interactive story game based on Harry Potter where you can battle a troll!
+                            </Text>
+                            <TouchableHighlight
+                                onPress={this.handleFirstQuestionPagePress}
+                            >
+                                <View style={styles.answerChoices}>
+                                    <Text style={styles.answerChoicesText}>
+                                        OK!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.noPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                That is OK! Would you still like to try out the story? You can battle a troll!
+                            </Text>
+                            <TouchableHighlight
+                                onPress={() => this.yesOrNoFeedback('Yes')}
+                            >
+                                <View style={styles.answerChoices}>
+                                    <Text style={styles.answerChoicesText}>
+                                        OK!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight
+                                onPress={this.handleQuestionPagePress}
+                            >
+                                <View style={styles.answerChoices}>
+                                    <Text style={styles.answerChoicesText}>
+                                        No
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                    </View>
+                </ImageBackground>
+                <ImageBackground
+                    style={styles.background}
+                    source={{ uri: 'https://codehs.com/uploads/f77e7bc355e411b6a373a9d5e03542c5' }}
+                >
+                    <View style={{ display: this.state.firstQuestionPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                You are fighting a troll! What spell do you use?
+                            </Text>
+                            <TouchableHighlight
+                                onPress={() => this.questionOneFeedback('First')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Expelliarmus!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight
+                                onPress={() => this.questionOneFeedback('Second')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Stupefy!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.expelliarmusPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                You disarmed the troll of its club! What spell do you use now?
+                            </Text>
+                            <TouchableHighlight
+                                onPress={() => this.questionTwoFeedback('First')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Lumos Maxima!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight
+                                onPress={() => this.questionTwoFeedback('Second')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Stupefy!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.stupefyPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                Oh no, your stunning spell bounced off the troll! What spell do you use now?
+                            </Text>
+                            <TouchableHighlight
+                                onPress={() => this.questionTwoFeedback('Third')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Expelliarmus!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight
+                                onPress={() => this.questionTwoFeedback('Fourth')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Riddikulus!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.lumosPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                You temporarily blinded the troll! Try a spell to finish it!
+                            </Text>
+                            <TouchableHighlight
+                                onPress={() => this.questionThreeFeedback('First')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Wingardium Leviosa!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight
+                                onPress={() => this.questionThreeFeedback('Second')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Avada Kedavra!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.stupefyPageDisplay2 }}>
+                    <   View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                Oh no, your stunning spell bounced off the troll! What spell do you do now?
+                            </Text>
+                            <TouchableHighlight
+                                onPress={() => this.questionThreeFeedback('Third')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Riddikulus!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight
+                                onPress={() => this.questionThreeFeedback('First')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Wingardium Leviosa!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.expelliarmusPageDisplay2 }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                You disarmed the troll of its club! What spell do you use now?
+                            </Text>
+                            <TouchableHighlight
+                                onPress={() => this.questionThreeFeedback('First')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Wingardium Leviosa!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight
+                                onPress={() => this.questionThreeFeedback('Second')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Avada Kedavra!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.riddikulusPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                This spell is for boggarts! Try another spell.
+                            </Text>
+                            <TouchableHighlight
+                                onPress={() => this.questionThreeFeedback('Fourth')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Lumos Maxima!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight
+                                onPress={() => this.questionThreeFeedback('First')}
+                            >
+                                <View style={styles.answerChoices2}>
+                                    <Text style={styles.answerChoicesText}>
+                                        Wingardium Leviosa!
+                                    </Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.wingardiumPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                You levitated the troll’s club and hit him in the head, successfully knocking him out! Ron Weasley would be proud. Play again?
+                            </Text>
+                            <View style={styles.answerChoicesContainer}>
+                                <TouchableHighlight
+                                    onPress={() => this.yesOrNoFeedback2('Yes')}
+                                >
+                                    <View style={styles.answerChoices}>
+                                        <Text style={styles.answerChoicesText}>
+                                            Yes
+                                        </Text>
+                                    </View>
+                                </TouchableHighlight>
+                                <TouchableHighlight
+                                    onPress={() => this.yesOrNoFeedback2('No')}
+                                >
+                                    <View style={styles.answerChoices}>
+                                        <Text style={styles.answerChoicesText}>
+                                            No 
+                                        </Text>
+                                    </View>
+                                </TouchableHighlight>
+                            </View>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.avadaPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                You’ve killed the troll! Congratulations, you saved Hogwarts! Play again?
+                            </Text>
+                            <View style={styles.answerChoicesContainer}>
+                                <TouchableHighlight
+                                    onPress={() => this.yesOrNoFeedback2('Yes')}
+                                >
+                                    <View style={styles.answerChoices}>
+                                        <Text style={styles.answerChoicesText}>
+                                            Yes
+                                        </Text>
+                                    </View>
+                                </TouchableHighlight>
+                                <TouchableHighlight
+                                    onPress={() => this.yesOrNoFeedback2('No')}
+                                >
+                                    <View style={styles.answerChoices}>
+                                        <Text style={styles.answerChoicesText}>
+                                            No 
+                                        </Text>
+                                    </View>
+                                </TouchableHighlight>
+                            </View>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.riddikulusPageDisplay2 }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                This spell is for boggarts! You failed. Try again?
+                            </Text>
+                            <View style={styles.answerChoicesContainer}>
+                                <TouchableHighlight
+                                    onPress={() => this.yesOrNoFeedback2('Yes')}
+                                >
+                                    <View style={styles.answerChoices}>
+                                        <Text style={styles.answerChoicesText}>
+                                            Yes
+                                        </Text>
+                                    </View>
+                                </TouchableHighlight>
+                                <TouchableHighlight
+                                    onPress={() => this.yesOrNoFeedback2('No')}
+                                >
+                                    <View style={styles.answerChoices}>
+                                        <Text style={styles.answerChoicesText}>
+                                            No 
+                                        </Text>
+                                    </View>
+                                </TouchableHighlight>
+                            </View>
+                        </View>
+                    </View>
+                    <View style={{ display: this.state.lumosPageDisplay2 }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph}>
+                                You temporarily blinded the troll, but it’s still dangerous. You failed. Try again?
+                            </Text>
+                            <View style={styles.answerChoicesContainer}>
+                                <TouchableHighlight
+                                    onPress={() => this.yesOrNoFeedback2('Yes')}
+                                >
+                                    <View style={styles.answerChoices}>
+                                        <Text style={styles.answerChoicesText}>
+                                            Yes
+                                        </Text>
+                                    </View>
+                                </TouchableHighlight>
+                                <TouchableHighlight
+                                    onPress={() => this.yesOrNoFeedback2('No')}
+                                >
+                                    <View style={styles.answerChoices}>
+                                        <Text style={styles.answerChoicesText}>
+                                            No 
+                                        </Text>
+                                    </View>
+                                </TouchableHighlight>
+                            </View>
+                        </View>
+                    </View>
+                </ImageBackground>
+                <ImageBackground
+                    style={styles.background}
+                    source={{ uri: 'https://codehs.com/uploads/e33e65dd3bd736576acce8362c02ef5f' }}
+                >
+                    <View style={{ display: this.state.lastPageDisplay }}>
+                        <View style={styles.contentContainer}>
+                            <Text style={styles.paragraph2}>
+                                Thanks for playing! Make sure to check out the Harry Potter series by J.K. Rowling!
+                            </Text>
+                        </View>
+                    </View>
+                </ImageBackground>
+            </View>
+        );
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: 'darkblue',
+    },
+    contentContainer: {
+        height: deviceHeight,
+        width: deviceWidth,
+        alignItems: 'center',
+    },
+    paragraph: {
+        fontFamily: 'Times New Roman',
+        fontSize: 30,
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginTop: 30,
+        marginLeft: 15,
+        marginRight: 15,
+    },
+    paragraph2: {
+        fontFamily: 'Times New Roman',
+        fontSize: 30,
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginTop: 380,
+        marginLeft: 15,
+        marginRight: 15,
+    },
+    answerChoicesContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    answerChoices: {
+        height: 90,
+        width: 120,
+        borderWidth: 2,
+        borderColor: 'black',
+        backgroundColor: 'black',
+        margin: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    answerChoices2: {
+        height: 90,
+        width: 250,
+        borderWidth: 2,
+        borderColor: 'black',
+        backgroundColor: 'black',
+        margin: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    answerChoicesText: {
+        fontFamily: 'Times New Roman',
+        fontSize: 40,
+        color: 'white',
+        textAlign:' center',
+    }
+});
